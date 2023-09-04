@@ -1,0 +1,14 @@
+      .passwordInput{
+          margin-top: 5%; 
+          text-align :left;
+      }
+      .displayBadge{
+          margin-top: 5%; 
+          display: none; 
+          text-align :left;
+      }
+      .strengthBadge .strong {
+        float: left;
+        position: relative;
+        color: green;
+      }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD STRENGTH</title>
+
+</head>
+<body>
+
+      <h1> Password Strength </h1>
+      <input type="password" placeholder="Type password" id="Pass">
+      <span id="St">PASSWORD must contain UPER CASE lower case number and charactors</span>
+    <script>
+let timeout;
+let password = document.getElementById('Pass');
+let str = document.getElementById('St');
+//RegExp
+let strong = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])')
+function StrChecker(PasswordParameter) {
+    if(strong.test(PasswordParameter)) {
+        str.textContent = 'GOOD YOUR PASSWORD IS STRONG ';
+    } 
+}password.addEventListener("input", () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => StrChecker(password.value), 100);
+  
+});
+      </script>
+  </body>
+  </html>
+
